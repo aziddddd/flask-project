@@ -1,1 +1,1 @@
-Sorry, still in progress. It will be done in soon
+Sorry, still in progress.
