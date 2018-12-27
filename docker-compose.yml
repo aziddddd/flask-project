@@ -1,8 +1,26 @@
 version: '2'
 services:
+    postgres:
+        restart: always
+        # container_name: flaskproject_postgres_1
+        image: postgres:latest
+        environment:
+            POSTGRES_USER: ${USER}
+            POSTGRES_PASSWORD: ${PASSWORD}
+            POSTGRES_DB: ${DB}  
+            PGDATA: /tmp
+        volumes:
+            - ./postgres-data/postgres:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
     web:
+        # container_name: flaskproject_web_1
         build: .
         ports:
             - "5000:5000"
         volumes:
             - .:/code
+        links:
+            - postgres
+        depends_on:
+            - postgres

@@ -1,6 +1,10 @@
 flask
+flask-sqlalchemy
+flask-wtf
 Jinja2
 MarkupSafe
 Werkzeug
 gunicorn
 itsdangerous
+psycopg2-binary
+python-dotenv   
