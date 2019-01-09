@@ -1,18 +1,17 @@
 from flask import Flask, render_template, request
 from models import db, User
 from forms import SignupForm
+import os
 
 POSTGRES = {
-    'user': 'postgres',
-    'pw': 'sususegar96',
-    'db': 'users',
-    'host': 'postgres',
-    'port': '5432',
+    'user': os.environ.get('USER'),
+    'pw': os.environ.get('PASSWORD'),
+    'db': os.environ.get('DB'),
+    'host': 'postgres'
 }
 
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://{}:{}@{}:{}/{}'.format(POSTGRES['user'], POSTGRES['pw'], POSTGRES['db'], POSTGRES['host'], POSTGRES['port'])
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres+psycopg2://%(user)s:\%(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://%(user)s:%(pw)s@%(host)s/%(db)s' % POSTGRES
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
