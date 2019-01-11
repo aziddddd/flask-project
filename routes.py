@@ -8,7 +8,7 @@ POSTGRES = {
     'user': os.environ.get('USER'),
     'pw': os.environ.get('PASSWORD'),
     'db': os.environ.get('DB'),
-    'host': 'postgres',
+    'host': 'localhost',
     'port': '5432'
 }
 app = Flask(__name__)
