@@ -8,3 +8,12 @@ class SignupForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired('Please enter your email address.'), Email('Please enter your email address.')])
     password = PasswordField('Password', validators=[DataRequired('Please enter your password.'), Length(min=6, message='Password must be 6 characters or more.')])
     submit = SubmitField('Sign Up', validators=[DataRequired()])
+
+class LoginFrom(FlaskForm):
+    email = StringField('Email', validators=[DataRequired('Please enter your email address.'), Email('Please enter your email address.')])
+    password = PasswordField('Password', validators=[DataRequired('Please enter your password.')])
+    submit = SubmitField('Sign In')
+
+class AddressFrom(FlaskForm):
+    address = StringField('Address', validators=[DataRequired('Please enter an address.')])
+    submit = SubmitField('Search')
