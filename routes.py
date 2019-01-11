@@ -8,7 +8,7 @@ import json
 #     'user': os.environ.get('USER'),
 #     'pw': os.environ.get('PASSWORD'),
 #     'db': os.environ.get('DB'),
-#     'host': '192.168.99.100'
+#     'host': 'postgres'
 # }
 
 port = int(os.environ.get("PORT", 5000))
@@ -92,7 +92,6 @@ def home():
 
     form = AddressFrom()
     places = []
-    my_coordinates = (37.4221, -122.0844)
 
     if request.method == 'POST':
         if form.validate() == False:
