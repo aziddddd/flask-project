@@ -8,11 +8,11 @@ POSTGRES = {
     'user': os.environ.get('USER'),
     'pw': os.environ.get('PASSWORD'),
     'db': os.environ.get('DB'),
-    'host': 'localhost',
-    'port': '5432'
+    'host': 'postgres'
 }
+
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://%(user)s:%(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://%(user)s:%(pw)s@%(host)s/%(db)s' % POSTGRES
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
