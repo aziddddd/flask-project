@@ -11,6 +11,8 @@ POSTGRES = {
     'host': 'postgres'
 }
 
+port = int(os.environ.get("PORT", 5000))
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://%(user)s:%(pw)s@%(host)s/%(db)s' % POSTGRES
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -108,4 +110,4 @@ def home():
         return render_template('home.html', form=form, my_coordinates=my_coordinates, places=places)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True)
+    app.run(host="0.0.0.0", debug=True, port=port)
