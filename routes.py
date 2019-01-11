@@ -8,7 +8,7 @@ POSTGRES = {
     'user': os.environ.get('USER'),
     'pw': os.environ.get('PASSWORD'),
     'db': os.environ.get('DB'),
-    'host': 'postgres'
+    'host': '192.168.99.100'
 }
 
 port = int(os.environ.get("PORT", 5000))
