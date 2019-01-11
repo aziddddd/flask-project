@@ -4,17 +4,18 @@ from forms import SignupForm, LoginFrom, AddressFrom
 import os
 import json
 
-POSTGRES = {
-    'user': os.environ.get('USER'),
-    'pw': os.environ.get('PASSWORD'),
-    'db': os.environ.get('DB'),
-    'host': '192.168.99.100'
-}
+# POSTGRES = {
+#     'user': os.environ.get('USER'),
+#     'pw': os.environ.get('PASSWORD'),
+#     'db': os.environ.get('DB'),
+#     'host': '192.168.99.100'
+# }
 
 port = int(os.environ.get("PORT", 5000))
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://%(user)s:%(pw)s@%(host)s/%(db)s' % POSTGRES
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://%(user)s:%(pw)s@%(host)s/%(db)s' % POSTGRES
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://sukmosdzsfjdkz:775b72a705ad601dc0f5fb849715ff2dec0068c66c33c75fc2ecc08dfb3a97be@ec2-23-21-86-22.compute-1.amazonaws.com:5432/dcjmemhhl4qnci'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
