@@ -22,7 +22,7 @@ services:
         ports:
             - "5000:5000"
         volumes:
-            - ./webapp:/opt/webapp
+            - .:/code
         links:
             - postgres
         depends_on:
