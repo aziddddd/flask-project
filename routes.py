@@ -92,6 +92,8 @@ def home():
 
     form = AddressFrom()
     places = []
+    # Initialise coordinate
+    my_coordinates = (37.4221, -122.0844)
 
     if request.method == 'POST':
         if form.validate() == False:
