@@ -1,4 +1,3 @@
-Web Framework Development with dockerized Flask and PostgreSQL using docker-compose.
+Web Framework Development with dockerized Flask and Heroku PostgreSQL using docker-compose.
 
-UPDATE : Sorry, still in progress.
-
+https://azidharun.herokuapp.com/
