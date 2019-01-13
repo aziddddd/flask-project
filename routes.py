@@ -4,7 +4,7 @@ from forms import SignupForm, LoginFrom, AddressFrom
 import os
 import json
 
-# Declare port for Heroku deployment
+# Declare port for Heroku deployment enabled
 port = int(os.environ.get('PORT', 5000))
 
 POSTGRES = {
