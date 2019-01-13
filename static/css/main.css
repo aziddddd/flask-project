@@ -85,7 +85,15 @@ a {
   text-transform: uppercase;
 }
 
-
+.btn-tertiary {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.23px;
+  padding: 12px 0px;
+  text-decoration: none;
+  color: #3372df;
+}
 
 /* 
  * Header
@@ -102,9 +110,22 @@ header {
   font-size: 17px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .title a, .title a:visited {
+  color: #3a3a3a;
+}
+
+.sign-out {
+  float: left;
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;  
+}
+
+.sign-out a, .sign-out a:visited {
   color: #3a3a3a;
 }
 
@@ -259,6 +280,20 @@ header {
 .section-map .nav {
   padding: 20px 0;
 }
+
+.section-map .sign-out {
+  font-family: 'Open Sans', sans-serif;
+  color: #3372df; 
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.23px;
+  padding: 12px 0px;
+  text-decoration: none;
+  float: right;
+  position: relative;
+  top: 65px;
+}
+
 
 .section-map .form-group {
   display: inline;

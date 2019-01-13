@@ -1,6 +1,26 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
 
-{% block content %}
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+    </head>
+    <body>
+        <header>
+            <div class="clearfix">
+                <div class="container">
+                    <h1 class="title"><a href="{{ url_for('home') }}">Where am I?</a></h1>
+                    <h1 style="float: right" class="sign-out"><a href="{{ url_for('logout') }}">Sign out</a></h1>
+                </div>
+            </div>
+        </header>
     <main class="hero-section">
         <div class="container">
             <div class="section-tabs">
@@ -33,9 +53,9 @@
                 </div>
                 <div>
                     <div id="map"></div>
-                </div>
-                <a href="{{ url_for('logout') }}" class="section-device">Sign Out</a>
-            </div>
+                <!-- </div>
+                <a href="{{ url_for('logout') }}" class="sign-out">Sign Out</a>
+            </div> -->
         </div>
     </main>
 
@@ -61,4 +81,5 @@
             .addTo(map);
         }    
     </script>
-{% endblock %}
+    </body>
+</html>
