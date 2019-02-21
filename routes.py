@@ -17,10 +17,10 @@ POSTGRES = {
 app = Flask(__name__)
 
 # Local run
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://%(user)s:%(pw)s@%(host)s/%(db)s' % POSTGRES
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://%(user)s:%(pw)s@%(host)s/%(db)s' % POSTGRES
 
 # Heroku run
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://sukmosdzsfjdkz:775b72a705ad601dc0f5fb849715ff2dec0068c66c33c75fc2ecc08dfb3a97be@ec2-23-21-86-22.compute-1.amazonaws.com:5432/dcjmemhhl4qnci'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://sukmosdzsfjdkz:775b72a705ad601dc0f5fb849715ff2dec0068c66c33c75fc2ecc08dfb3a97be@ec2-23-21-86-22.compute-1.amazonaws.com:5432/dcjmemhhl4qnci'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
