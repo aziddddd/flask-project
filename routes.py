@@ -7,12 +7,12 @@ import json
 # Declare port for Heroku deployment enabled
 port = int(os.environ.get('PORT', 5000))
 
-# POSTGRES = {
-#     'user': os.environ.get('USER'),
-#     'pw': os.environ.get('PASSWORD'),
-#     'db': os.environ.get('DB'),
-#     'host': 'postgres'
-# }
+POSTGRES = {
+    'user': os.environ.get('USER'),
+    'pw': os.environ.get('PASSWORD'),
+    'db': os.environ.get('DB'),
+    'host': 'postgres'
+}
 
 app = Flask(__name__)
 
